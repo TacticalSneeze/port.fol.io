@@ -1,65 +1,114 @@
 <!doctype html>
 <html class="fsvs" lang="en">
     <head>
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
         <link href="assets/css/style.css" media="all" rel="stylesheet" type="text/css" />
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script src="assets/js/bundle.js"></script>
+        <!--
+
+        Why hello there! Feel free to take a look around.
+    
+         -->
+        <script src="assets/js/bundle.js"></script>  
+        <script src="assets/js/custom.js"></script>
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,900" rel="stylesheet" type="text/css">
+
+    
         <script>
-        jQuery(document).ready(function($){
-            var slider = $.fn.fsvs({
-                autoPlay            : false,
-                speed               : 1000,
-                bodyID              : 'fsvs-body',
-                selector            : '> .slide',
-                mouseSwipeDisance   : 40,
-                afterSlide          : function(){},
-                beforeSlide         : function(){},
-                endSlide            : function(){},
-                mouseWheelEvents    : true,
-                mouseWheelDelay     : false,
-                mouseDragEvents     : true,
-                touchEvents         : true,
-                arrowKeyEvents      : true,
-                pagination          : true,
-                nthClasses          : 2,
-                detectHash          : true
+            jQuery(document).ready(function($){
+                var slider = $.fn.fsvs({
+                    autoPlay            : false,
+                    speed               : 500,
+                    bodyID              : 'fsvs-body',
+                    selector            : '> .slide',
+                    mouseSwipeDisance   : 40,
+                    afterSlide          : function(){},
+                    beforeSlide         : function(){},
+                    endSlide            : function(){},
+                    mouseWheelEvents    : true,
+                    mouseWheelDelay     : false,
+                    mouseDragEvents     : true,
+                    touchEvents         : true,
+                    arrowKeyEvents      : true,
+                    pagination          : true,
+                    nthClasses          : 2,
+                    detectHash          : true
+                });
             });
-        });
         </script>
     </head>
     <body>
-        <div id="fsvs-body">
-            <div class="slide">
-                <p>Slide 1</p>
-                <p>
-                    <a href="http://luke.sno.wden.co.uk/assets/images/tappy.png">
-                        <img src="http://luke.sno.wden.co.uk/assets/images/tappy.png" alt="">
-                    </a>
-                </p>
-            </div>
-            <div class="slide">Slide 2
-                <div class="scrollable" style="background:grey;width:500px;height:400px;overflow:auto;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt aliquet venenatis. Quisque nec dolor id purus aliquam viverra a ac eros. Quisque a tellus semper, mollis ligula et, rutrum risus. Suspendisse purus turpis, semper et turpis eu, venenatis egestas nisi. Vestibulum rhoncus laoreet augue, sit amet aliquet sem imperdiet nec. Aenean id luctus turpis. Aenean porttitor libero in sem tempor lobortis. Mauris in magna quis purus volutpat laoreet. Nullam sollicitudin volutpat lorem, non dictum purus maximus ut. Morbi id condimentum sapien, convallis malesuada lacus. Mauris id varius nunc. Duis ligula elit, ornare et leo mattis, volutpat vulputate arcu. Nulla tincidunt erat sed cursus ultricies. Curabitur bibendum turpis quis velit porttitor, at eleifend dolor dictum.
-Sed eget ante eget risus rhoncus porta. Nulla est sapien, tristique venenatis lectus in, tincidunt pharetra diam. Donec eu vehicula ex, non posuere ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet justo ipsum, et varius sem lacinia sit amet. Duis faucibus leo et tempor ullamcorper. Curabitur elementum hendrerit elit eget sodales. Maecenas imperdiet mi tellus, a commodo orci condimentum vitae. Suspendisse lobortis magna augue, sed venenatis est consectetur in. Vestibulum semper dapibus tortor quis posuere. Sed consectetur ipsum mi, sed vestibulum purus tempus eu. Suspendisse arcu leo, suscipit vel arcu vulputate, mattis auctor massa. Nam aliquam vel neque ut accumsan. Cras egestas lorem id mi eleifend commodo. Vestibulum posuere fringilla massa sit amet imperdiet. Vivamus tincidunt lorem feugiat lorem varius laoreet.
-Duis in fringilla felis. Aenean id turpis suscipit, finibus velit eu, tempus massa. Pellentesque id purus ut neque venenatis vestibulum. Etiam molestie vestibulum congue. Duis sit amet ex sit amet neque auctor molestie. Proin vel magna lacinia, blandit elit et, tincidunt nulla. Vestibulum eleifend quam diam, eget auctor nisl ultricies ac. Sed dictum nec tortor non fringilla. Curabitur quam tortor, porta gravida imperdiet ut, porttitor non quam. Sed facilisis diam ut mollis gravida. In nisl enim, luctus a auctor non, auctor nec dolor. In eget mi dolor. Nulla malesuada arcu in diam tempus varius. Suspendisse in viverra est, non egestas lacus. Proin id tortor eros.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt aliquet venenatis. Quisque nec dolor id purus aliquam viverra a ac eros. Quisque a tellus semper, mollis ligula et, rutrum risus. Suspendisse purus turpis, semper et turpis eu, venenatis egestas nisi. Vestibulum rhoncus laoreet augue, sit amet aliquet sem imperdiet nec. Aenean id luctus turpis. Aenean porttitor libero in sem tempor lobortis. Mauris in magna quis purus volutpat laoreet. Nullam sollicitudin volutpat lorem, non dictum purus maximus ut. Morbi id condimentum sapien, convallis malesuada lacus. Mauris id varius nunc. Duis ligula elit, ornare et leo mattis, volutpat vulputate arcu. Nulla tincidunt erat sed cursus ultricies. Curabitur bibendum turpis quis velit porttitor, at eleifend dolor dictum.
-Sed eget ante eget risus rhoncus porta. Nulla est sapien, tristique venenatis lectus in, tincidunt pharetra diam. Donec eu vehicula ex, non posuere ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet justo ipsum, et varius sem lacinia sit amet. Duis faucibus leo et tempor ullamcorper. Curabitur elementum hendrerit elit eget sodales. Maecenas imperdiet mi tellus, a commodo orci condimentum vitae. Suspendisse lobortis magna augue, sed venenatis est consectetur in. Vestibulum semper dapibus tortor quis posuere. Sed consectetur ipsum mi, sed vestibulum purus tempus eu. Suspendisse arcu leo, suscipit vel arcu vulputate, mattis auctor massa. Nam aliquam vel neque ut accumsan. Cras egestas lorem id mi eleifend commodo. Vestibulum posuere fringilla massa sit amet imperdiet. Vivamus tincidunt lorem feugiat lorem varius laoreet.
-Duis in fringilla felis. Aenean id turpis suscipit, finibus velit eu, tempus massa. Pellentesque id purus ut neque venenatis vestibulum. Etiam molestie vestibulum congue. Duis sit amet ex sit amet neque auctor molestie. Proin vel magna lacinia, blandit elit et, tincidunt nulla. Vestibulum eleifend quam diam, eget auctor nisl ultricies ac. Sed dictum nec tortor non fringilla. Curabitur quam tortor, porta gravida imperdiet ut, porttitor non quam. Sed facilisis diam ut mollis gravida. In nisl enim, luctus a auctor non, auctor nec dolor. In eget mi dolor. Nulla malesuada arcu in diam tempus varius. Suspendisse in viverra est, non egestas lacus. Proin id tortor eros.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt aliquet venenatis. Quisque nec dolor id purus aliquam viverra a ac eros. Quisque a tellus semper, mollis ligula et, rutrum risus. Suspendisse purus turpis, semper et turpis eu, venenatis egestas nisi. Vestibulum rhoncus laoreet augue, sit amet aliquet sem imperdiet nec. Aenean id luctus turpis. Aenean porttitor libero in sem tempor lobortis. Mauris in magna quis purus volutpat laoreet. Nullam sollicitudin volutpat lorem, non dictum purus maximus ut. Morbi id condimentum sapien, convallis malesuada lacus. Mauris id varius nunc. Duis ligula elit, ornare et leo mattis, volutpat vulputate arcu. Nulla tincidunt erat sed cursus ultricies. Curabitur bibendum turpis quis velit porttitor, at eleifend dolor dictum.
-Sed eget ante eget risus rhoncus porta. Nulla est sapien, tristique venenatis lectus in, tincidunt pharetra diam. Donec eu vehicula ex, non posuere ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet justo ipsum, et varius sem lacinia sit amet. Duis faucibus leo et tempor ullamcorper. Curabitur elementum hendrerit elit eget sodales. Maecenas imperdiet mi tellus, a commodo orci condimentum vitae. Suspendisse lobortis magna augue, sed venenatis est consectetur in. Vestibulum semper dapibus tortor quis posuere. Sed consectetur ipsum mi, sed vestibulum purus tempus eu. Suspendisse arcu leo, suscipit vel arcu vulputate, mattis auctor massa. Nam aliquam vel neque ut accumsan. Cras egestas lorem id mi eleifend commodo. Vestibulum posuere fringilla massa sit amet imperdiet. Vivamus tincidunt lorem feugiat lorem varius laoreet.
-Duis in fringilla felis. Aenean id turpis suscipit, finibus velit eu, tempus massa. Pellentesque id purus ut neque venenatis vestibulum. Etiam molestie vestibulum congue. Duis sit amet ex sit amet neque auctor molestie. Proin vel magna lacinia, blandit elit et, tincidunt nulla. Vestibulum eleifend quam diam, eget auctor nisl ultricies ac. Sed dictum nec tortor non fringilla. Curabitur quam tortor, porta gravida imperdiet ut, porttitor non quam. Sed facilisis diam ut mollis gravida. In nisl enim, luctus a auctor non, auctor nec dolor. In eget mi dolor. Nulla malesuada arcu in diam tempus varius. Suspendisse in viverra est, non egestas lacus. Proin id tortor eros.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt aliquet venenatis. Quisque nec dolor id purus aliquam viverra a ac eros. Quisque a tellus semper, mollis ligula et, rutrum risus. Suspendisse purus turpis, semper et turpis eu, venenatis egestas nisi. Vestibulum rhoncus laoreet augue, sit amet aliquet sem imperdiet nec. Aenean id luctus turpis. Aenean porttitor libero in sem tempor lobortis. Mauris in magna quis purus volutpat laoreet. Nullam sollicitudin volutpat lorem, non dictum purus maximus ut. Morbi id condimentum sapien, convallis malesuada lacus. Mauris id varius nunc. Duis ligula elit, ornare et leo mattis, volutpat vulputate arcu. Nulla tincidunt erat sed cursus ultricies. Curabitur bibendum turpis quis velit porttitor, at eleifend dolor dictum.
-Sed eget ante eget risus rhoncus porta. Nulla est sapien, tristique venenatis lectus in, tincidunt pharetra diam. Donec eu vehicula ex, non posuere ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet justo ipsum, et varius sem lacinia sit amet. Duis faucibus leo et tempor ullamcorper. Curabitur elementum hendrerit elit eget sodales. Maecenas imperdiet mi tellus, a commodo orci condimentum vitae. Suspendisse lobortis magna augue, sed venenatis est consectetur in. Vestibulum semper dapibus tortor quis posuere. Sed consectetur ipsum mi, sed vestibulum purus tempus eu. Suspendisse arcu leo, suscipit vel arcu vulputate, mattis auctor massa. Nam aliquam vel neque ut accumsan. Cras egestas lorem id mi eleifend commodo. Vestibulum posuere fringilla massa sit amet imperdiet. Vivamus tincidunt lorem feugiat lorem varius laoreet.
-Duis in fringilla felis. Aenean id turpis suscipit, finibus velit eu, tempus massa. Pellentesque id purus ut neque venenatis vestibulum. Etiam molestie vestibulum congue. Duis sit amet ex sit amet neque auctor molestie. Proin vel magna lacinia, blandit elit et, tincidunt nulla. Vestibulum eleifend quam diam, eget auctor nisl ultricies ac. Sed dictum nec tortor non fringilla. Curabitur quam tortor, porta gravida imperdiet ut, porttitor non quam. Sed facilisis diam ut mollis gravida. In nisl enim, luctus a auctor non, auctor nec dolor. In eget mi dolor. Nulla malesuada arcu in diam tempus varius. Suspendisse in viverra est, non egestas lacus. Proin id tortor eros.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt aliquet venenatis. Quisque nec dolor id purus aliquam viverra a ac eros. Quisque a tellus semper, mollis ligula et, rutrum risus. Suspendisse purus turpis, semper et turpis eu, venenatis egestas nisi. Vestibulum rhoncus laoreet augue, sit amet aliquet sem imperdiet nec. Aenean id luctus turpis. Aenean porttitor libero in sem tempor lobortis. Mauris in magna quis purus volutpat laoreet. Nullam sollicitudin volutpat lorem, non dictum purus maximus ut. Morbi id condimentum sapien, convallis malesuada lacus. Mauris id varius nunc. Duis ligula elit, ornare et leo mattis, volutpat vulputate arcu. Nulla tincidunt erat sed cursus ultricies. Curabitur bibendum turpis quis velit porttitor, at eleifend dolor dictum.
-Sed eget ante eget risus rhoncus porta. Nulla est sapien, tristique venenatis lectus in, tincidunt pharetra diam. Donec eu vehicula ex, non posuere ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet justo ipsum, et varius sem lacinia sit amet. Duis faucibus leo et tempor ullamcorper. Curabitur elementum hendrerit elit eget sodales. Maecenas imperdiet mi tellus, a commodo orci condimentum vitae. Suspendisse lobortis magna augue, sed venenatis est consectetur in. Vestibulum semper dapibus tortor quis posuere. Sed consectetur ipsum mi, sed vestibulum purus tempus eu. Suspendisse arcu leo, suscipit vel arcu vulputate, mattis auctor massa. Nam aliquam vel neque ut accumsan. Cras egestas lorem id mi eleifend commodo. Vestibulum posuere fringilla massa sit amet imperdiet. Vivamus tincidunt lorem feugiat lorem varius laoreet.
-Duis in fringilla felis. Aenean id turpis suscipit, finibus velit eu, tempus massa. Pellentesque id purus ut neque venenatis vestibulum. Etiam molestie vestibulum congue. Duis sit amet ex sit amet neque auctor molestie. Proin vel magna lacinia, blandit elit et, tincidunt nulla. Vestibulum eleifend quam diam, eget auctor nisl ultricies ac. Sed dictum nec tortor non fringilla. Curabitur quam tortor, porta gravida imperdiet ut, porttitor non quam. Sed facilisis diam ut mollis gravida. In nisl enim, luctus a auctor non, auctor nec dolor. In eget mi dolor. Nulla malesuada arcu in diam tempus varius. Suspendisse in viverra est, non egestas lacus. Proin id tortor eros.
+
+         <div id="fsvs-body">
+            
+            <div class="slide" id="slide1">
+
+                <div class="video-wrapper">
+                    <video autoplay="" class="slide-video" loop="" poster=
+                    "assets/img/dogs.jpg"
+                    preload="auto"><source src=
+                    "assets/img/dogs.webm"
+                    type="video/webm"><source src=
+                    "assets/img/dogs.ogg"
+                    type="video/ogg"><source src=
+                    "assets/img/dogs.mp4"
+                    type="video/mp4"></video>
+                    <div class="slide-image touch-fallback-image" style=
+                    "background-image: url(assets/img/dogs.jpg)">
+                    </div>
+                </div>
+
+                <div class="slide-content-wrapper">
+                    <div class="slide-content">
+                        <div class="slide-content-inner">
+                            <a href=
+                            "http://bmobilized.com/showcase-examples" target="_blank"><span class=
+                            "category">Mobile Sites</span>
+                            <h2>Expert level responsive design, client management, and creativity.</h2>
+                            <div class="btn btn-inverse">
+                                <span class="inactive">The Best of 'Em</span>
+                                <span class="active">The Best of 'Em</span></div></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="slide">Slide 3</div>
-            <div class="slide">Slide 4</div>
+
+            <div class="slide" id="slide2">
+                <div class="slide-content-wrapper">
+                    <div class="slide-content">
+                        <div class="slide-content-inner">
+                            <a href=
+                            "https://www.youtube.com/watch?v=8nwdxyWNoj8" target="_blank"><span class=
+                            "category">Video Explainers</span>
+                            <h2>Teach the audience, the simplest way.</h2>
+                            <div class="btn btn-inverse">
+                                <span class="inactive">YouTube Me</span>
+                                <span class="active">YouTube Me</span></div></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="slide" id="slide3">
+                <div class="slide-content-wrapper">
+                    <div class="slide-content">
+                        <div class="slide-content-inner">
+                            <a href=
+                            "http://bmobilized.com" target="_blank"><span class=
+                            "category">Content Management</span>
+                            <h2>Custom CMS Templates.</h2>
+                            <div class="btn btn-inverse">
+                                <span class="inactive">Latest Work</span>
+                                <span class="active">Latest Work</span></div></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        
         </div>
+    
     </body>
 </html>
