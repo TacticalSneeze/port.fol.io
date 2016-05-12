@@ -1,0 +1,390 @@
+//
+//	Generic base styling for common elements
+// ------------------------------------------------ \
+
+//	Border box sizing
+// ------------------------------------------------ \
+
+* { 
+    &,
+    &:before,
+    &:after {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+}
+
+
+//	Page
+// ------------------------------------------------ \
+
+html {
+	font-family: $sans-serif;
+    font-size: ($base-font-size / 16px) * 1em;
+    line-height: $base-line-height / $base-font-size;
+    background-color: $base-background-color;
+    color: $base-font-color;
+    overflow-y: scroll;
+    height: 100%;
+}
+
+body {
+	min-height: 100%;
+}
+
+
+//	Headings
+// ------------------------------------------------ \
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: $base-heading-font-stack;
+	line-height: $base-heading-line-height;
+	color: $base-heading-font-color;
+	font-weight: $base-heading-font-weight;
+}
+
+
+h1, .h1, %h1 { @include font-size($base-heading-font-size-h1); }
+h2, .h2, %h2 { @include font-size($base-heading-font-size-h2); }
+h3, .h3, %h3 { @include font-size($base-heading-font-size-h3); }
+h4, .h4, %h4 { @include font-size($base-heading-font-size-h4); }
+h5, .h5, %h5 { @include font-size($base-heading-font-size-h5); }
+h6, .h6, %h6 { @include font-size($base-heading-font-size-h6); }
+
+
+//	Images
+// ------------------------------------------------ \
+
+img {
+    max-width: 100%;
+}
+
+
+//	Links
+// ------------------------------------------------ \
+
+a, a:visited {
+	color: $base-link-color;
+	text-decoration: none;
+	transition: color 0.2s ease-in-out;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+}
+
+a:hover,
+a:focus {
+	color: $base-link-hover-color;
+	font-weight: 300;
+}
+
+
+
+//	Code
+// ------------------------------------------------ \
+
+code {
+	background: #f5f2f0;
+	border: 1px solid $grey;
+	color: $dark;
+	padding: $base-space--quarter/3 $base-space--quarter;
+	font-family: Monaco, Verdana, "Dejavu Sans", sans-serif ;
+	border-radius: 3px;
+	white-space: nowrap;
+	font-size: inherit;
+}
+
+// Keyboard inputs
+kbd {
+	background: $dark;
+	color: white;
+	padding: $base-space--quarter/3 $base-space--quarter;
+	font-family: Monaco, Verdana, "Dejavu Sans", sans-serif ;
+	border-radius: 3px;
+	@include font-size(14px);
+}
+
+pre {
+	display: block;
+	overflow: auto;
+	max-width: 500px;
+	word-break: break-all; /* webkit */
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: -moz-pre-wrap; /* fennec */
+	white-space: pre-wrap;
+	white-space: pre\9; /* IE7+ */
+	padding-top: $base-space;
+	color: $dark;
+	background: #f5f2f0;
+	border-radius: 4px;
+	border: 1px solid $grey;
+	
+	> :last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+//	Tables
+// ------------------------------------------------ \
+
+table {
+  border-collapse: collapse;
+  margin: $base-space--half 0;
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: $base-space;
+}
+
+th {
+  border: 1px solid $light;
+  font-weight: bold;
+  padding: ($base-line-height / 2) 0;
+  text-align: left;
+  padding: $base-space--half;
+  color: $dark;
+}
+
+td {
+  border: 1px solid $light;
+  padding: $base-space--half 0;
+  padding: $base-space--half;
+}
+
+tr, td, th {
+  vertical-align: middle;
+}
+
+
+//	Forms
+// ------------------------------------------------ \
+
+fieldset {
+	background: none;
+	border: 1px solid $light;
+	padding: $base-space;
+	margin-bottom: $base-space;
+
+	legend {
+		padding: 0 $base-space--half;
+		color: $dark;
+	}
+}
+
+label {
+	margin-bottom: $base-space--quarter;
+	display: inline-block;
+	color: $dark;
+
+	&.required:after {
+	content: "*";
+	}
+
+	abbr {
+	display: none;
+	}
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="number"],
+input[type="password"],
+textarea {
+	width: 100%;
+	display: block;
+	font-size: 14px;
+	color: $med-grey;
+	margin-bottom: $base-space;
+	outline: none;
+	border: 1px solid transparent;
+	border-radius: 1px;
+	padding: $base-space--quarter;
+	box-shadow: none;
+	background: darken($off-white, 2%);
+	transition: border 0.4s ease-in-out, box-shadow 0.4s ease-in-out, background 0.4s ease-in-out;
+
+	&:hover {
+		border: 1px solid $grey;
+	}
+
+	&:focus {
+		border: 1px solid $grey;
+		box-shadow: 0 0 5px 0 #ccc;
+		background: $off-white;
+	}
+
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+	background: none;
+	border: 1px solid transparent;
+	padding: $base-space--half $base-space;
+	color: $dark;
+	border-radius: 1px;
+	outline: none;
+	transition: border 0.4s ease-in-out, box-shadow 0.4s ease-in-out, background 0.4s ease-in-out;
+	box-shadow: none;
+	background: darken($off-white, 2%);
+
+	&:hover,
+	&:focus {
+		border: 1px solid $grey;
+		box-shadow: 0 0 5px 0 #ccc;
+		background: $off-white;
+	}
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: $base-space--quarter;
+}
+
+input[type="file"] {
+  margin-bottom: $base-space--quarter;
+  padding-bottom: $base-space--quarter;
+  width: 100%;
+}
+
+select {
+  margin-bottom: $base-space;
+  max-width: 100%;
+  width: auto;
+}
+
+//	Full Page Slide Video
+// ------------------------------------------------ \
+
+.video-wrapper {
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    opacity: .2; 
+}
+
+video {
+    @include transform(translate3d(-50%,-50%,0));
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+//	Slide Contents
+// ------------------------------------------------ \
+
+// ---------Slide Overlay Color Gradients (Testing, needs proper variables) --------------- \
+
+.orangeOverlay { @include linear-gradient(45deg, yellow, red, yellow, $fallback: #c2e59c);}
+
+.purpleOverlay { @include linear-gradient(135deg, violet, blue, $fallback: #B993D6);}
+
+.greenOverlay { @include linear-gradient(to left, yellow, green, yellow, $fallback: #B993D6);}
+
+
+
+
+section {
+    @include span-columns(10);
+    @include shift();
+    height: 100%
+  }
+
+article {
+      @include vertical-align;
+      text-align: center;
+    }
+
+
+.slide-content-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.slide-content {
+    max-width: 850px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: table;
+    padding: 20px 90px;
+    margin: 0 auto;
+    z-index: 3;
+}
+ 
+
+.slide-content-inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.slide-content h1 { 
+	text-transform: $base-heading-text-transform;
+	line-height: 1.6em;
+}
+
+section h2 {
+    margin: 0;
+    color: $base-font-color;
+    font-size: $base-font-size * 3;
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+.category { 
+    display: block;
+    font-size: $category-font-size;
+    font-color: $category-font-color;
+    font-weight: $category-font-weight;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin-bottom: 18px;
+ }
+
+ .btn, a.btn {
+    display: inline-block;
+    margin-top: 30px;
+    color: #fff;
+    text-align: center;
+    font-size: .7em;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.4em;
+    letter-spacing: 3px;
+    padding: 14px 35px;
+    background: 0 0;
+    border: thin solid #fff;
+    border-radius: 2px;
+    -webkit-font-smoothing: antialiased;
+}
+
+span.inactive {
+    display: none;
+}
+
+.btn-inverse:hover {
+    background-color: #fff;
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    color:$yellow;
+}
+

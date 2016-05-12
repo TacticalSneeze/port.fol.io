@@ -1,0 +1,31 @@
+{
+  "name": "port.fol.io",
+  "version": "1.0.3",
+  "description": "Jonathon's Portfolio",
+  "main": "bundle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TacticalSneeze/port.fol.io.git"
+  },
+  "keywords": [
+    "Portfolio",
+    "Jonathon",
+    "Westbrook"
+  ],
+  "author": "Jonathon Westbrook",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TacticalSneeze/port.fol.io/issues"
+  },
+  "homepage": "https://github.com/TacticalSneeze/port.fol.io#readme",
+  "devDependencies": {
+    "browser-sync": "^2.12.5",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1",
+    "node-bourbon": "^4.2.8",
+    "node-neat": "^1.7.2"
+  }
+}

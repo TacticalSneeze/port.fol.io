@@ -1,0 +1,38 @@
+//
+//	Imports
+// ------------------------------------------------ \
+@import "bourbon";
+@import "neat";
+
+//	Utils
+// -------------------------------------------------\
+
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/reset";
+@import "utils/helpers";
+
+
+
+//	Settings and variable overrides
+// ------------------------------------------------ \
+
+@import "settings";
+
+
+//	Base styles
+// ------------------------------------------------ \
+
+@import "base/base";
+
+
+//	Partials (your own custom styles)
+// ------------------------------------------------ \
+
+@import "partials/fsvs";
+@import "partials/shared";
+
+//	Sourcemap URL (**DO NOT DELETE**)
+// ------------------------------------------------ \
+
+/*# sourceMappingURL=style.css.map */
