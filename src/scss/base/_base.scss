@@ -296,8 +296,6 @@ video {
 .greenOverlay { @include linear-gradient(to left, yellow, green, yellow, $fallback: #B993D6);}
 
 
-
-
 section {
     @include span-columns(10);
     @include shift();

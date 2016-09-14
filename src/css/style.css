@@ -1,10 +1,8 @@
 html {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 *, *::after, *::before {
-  -moz-box-sizing: inherit;
-       box-sizing: inherit; }
+  box-sizing: inherit; }
 
 body {
   margin: 0; }
@@ -130,8 +128,7 @@ input {
 
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
-       box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0; }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -142,6 +139,7 @@ input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -203,6 +201,7 @@ ul, ol, dd {
   margin: 0 15px; }
 
 *, *:before, *:after {
+  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
@@ -429,6 +428,9 @@ select {
 
 video {
   -webkit-transform: translate3d(-50%, -50%, 0);
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -ms-transform: translate3d(-50%, -50%, 0);
+  -o-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0);
   position: absolute;
   min-width: 100%;
@@ -441,14 +443,17 @@ video {
 
 .orangeOverlay {
   background-color: #c2e59c;
+  background-image: -webkit-linear-gradient(-315deg, yellow, red, yellow);
   background-image: linear-gradient(45deg,yellow, red, yellow); }
 
 .purpleOverlay {
   background-color: #B993D6;
+  background-image: -webkit-linear-gradient(-405deg, violet, blue);
   background-image: linear-gradient(135deg,violet, blue); }
 
 .greenOverlay {
   background-color: #B993D6;
+  background-image: -webkit-linear-gradient(right, yellow, green, yellow);
   background-image: linear-gradient(to left,yellow, green, yellow); }
 
 section {
@@ -465,6 +470,7 @@ article {
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   text-align: center; }
 
@@ -531,6 +537,8 @@ span.inactive {
 
 .btn-inverse:hover {
   background-color: #fff;
+  -webkit-transition: none;
+  -o-transition: none;
   transition: none;
   color: #f1c40f; }
 
@@ -594,3 +602,5 @@ html.fsvs {
           background: white; }
       html.fsvs #fsvs-pagination li:last-child {
         margin: 0; }
+
+/*# sourceMappingURL=style.css.map */

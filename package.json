@@ -22,8 +22,10 @@
   },
   "homepage": "https://github.com/TacticalSneeze/port.fol.io#readme",
   "devDependencies": {
+    "autoprefixer": "^6.3.6",
     "browser-sync": "^2.12.5",
     "gulp": "^3.9.1",
+    "gulp-postcss": "^6.1.1",
     "gulp-sass": "^2.3.1",
     "node-bourbon": "^4.2.8",
     "node-neat": "^1.7.2"
